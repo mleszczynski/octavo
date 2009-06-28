@@ -1,10 +1,18 @@
+# -*- coding: utf-8 -*-
+
 from django.conf.urls.defaults import *
+
+from octavo import admin
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
+handler500 = 'octavo.main.views.handler500'
+handler404 = 'octavo.main.views.handler404'
+
+
+urlpatterns = patterns('octavo.main.views',
     # Example:
     # (r'^octavo/', include('octavo.foo.urls')),
 
@@ -14,4 +22,10 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # (r'^admin/(.*)', admin.site.root),
+    (r'^octavo/$', 'index'),
 )
+#
+#urlpatterns += patterns('',
+#   
+#    (r'^admin/(.*)', admin.site.root),
+#)

@@ -1,0 +1,25 @@
+{% load i18n %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE }}" xml:lang="{{ LANGUAGE_CODE }}">
+<head>
+	<title>{{ SITE_TITLE }}</title>
+	
+	<link rel="stylesheet" href="{{ MEDIA_URL }}css/badzmyzdrowi.css" type="text/css" />
+	<link rel="shortcut icon" href="{{ MEDIA_URL }}gfx/favicon.ico" type="image/x-icon" />
+	
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	
+	{% block HEAD %}
+	{% endblock HEAD %}
+	
+</head>
+<body>
+	<div id="wrapper">
+		
+		{% block BODY %}
+		{% endblock BODY %}
+		
+	</div>
+</body>
+</html>
