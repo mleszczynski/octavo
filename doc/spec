@@ -1,0 +1,26 @@
+﻿1. Sposob stworzenia warstwy DAO/SERWISOW/obslugi transakcji
+2. Sposob tworzenia interfejsu administracyjnego (value listy, formularze)
+3. Ładne adresy URL
+4. Templating
+Oddzielenie kodu widokow od kodu kontrolera (na potrzeby customizowania
+przez grafikow)
+5. Tłumaczenie, czyli w skrocie i18n.
+6. Reuzywanie
+Komponentyzacja w obrebie danego projektu.
+Mozliwosc korzystania z raz stworzonego kodu w innych projektach.
+7. Security
+Jak autentykowac/autoryzowac uzytkownikow?
+8. Wsparcie dla Web 2.0.
+Bo kazdy lubi stronki z AJAXem, ale nie kazdy lubi je pisac.
+9. Wsparcie dla testowania 
+
+
+1. Zamawianie książki - jeden formularz dla zamawiającego (kto zamawia,
+jaką książę - URL do strony książki), interfejs dla administratora,
+który umożliwi zmianę stanu, wysyłanie maili o zmianie stanu
+2. Zapisaniu informacji gdzie można znaleźć recenzje
+3. Wypożyczenie książki - bez kolejki (chyba, że ktoś chce) 
+
+
+Czy pokazujemy też jak się ustawia nowy projekt?
+

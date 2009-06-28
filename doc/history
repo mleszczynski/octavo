@@ -1,0 +1,4 @@
+﻿django-admin.py startproject octavo
+cd octavo
+python manage.py startapp main
+
