@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.conf.urls.defaults import *
+from django.conf import settings
 
 from octavo import admin
 
@@ -21,11 +22,14 @@ urlpatterns = patterns('octavo.main.views',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # (r'^admin/(.*)', admin.site.root),
+    (r'^octavo/admin/(.*)', admin.site.root),
     (r'^octavo/$', 'index'),
+    (r'^octavo/book/add/$', 'add_book'),
 )
-#
-#urlpatterns += patterns('',
-#   
-#    (r'^admin/(.*)', admin.site.root),
-#)
+
+urlpatterns += patterns('django.views.static',
+    (r'^octavo/media/gfx/(?P<path>.*)$', 'serve', {'document_root': ('%s/%s' % (settings.MEDIA_ROOT, 'gfx'))}),
+    (r'^octavo/media/css/(?P<path>.*)$', 'serve', {'document_root': ('%s/%s' % (settings.MEDIA_ROOT, 'css'))}),
+    (r'^octavo/media/js/(?P<path>.*)$', 'serve', {'document_root': ('%s/%s' % (settings.MEDIA_ROOT, 'js'))}),
+    (r'^octavo/media/data/(?P<path>.*)$', 'serve', {'document_root': ('%s/%s' % (settings.MEDIA_ROOT, 'data'))}),
+)

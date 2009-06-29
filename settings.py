@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # Django settings for octavo project.
 
 BASE_DIR = 'e:/___open_source'
@@ -13,8 +15,8 @@ MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'mysql'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = 'octavo'             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
+DATABASE_USER = 'root'             # Not used with sqlite3.
+DATABASE_PASSWORD = 'michu666'         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
@@ -37,7 +39,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = BASE_DIR + '/badzmyzdrowi/_media/'
+MEDIA_ROOT = BASE_DIR + '/octavo/_media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -79,6 +81,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.admin',
     'octavo.main',
 )
 
@@ -103,3 +106,5 @@ else:
 ROOT_URL = '/octavo/'
 LOGIN_REDIRECT_URL = ROOT_URL
 LOGIN_URL = ROOT_URL + 'login/'
+
+SITE_TITLE = 'octavo'

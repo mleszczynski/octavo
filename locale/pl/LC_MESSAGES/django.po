@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: octavo v.01\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-28 19:22+0200\n"
-"PO-Revision-Date: 2009-06-28 19:24+0100\n"
+"POT-Creation-Date: 2009-06-29 22:54+0200\n"
+"PO-Revision-Date: 2009-06-29 22:55+0100\n"
 "Last-Translator: Michał Leszczyński <michal.leszczynski@blackhog.pl>\n"
 "Language-Team: octavo <michal.leszcz@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,18 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: POLAND\n"
 "X-Poedit-SourceCharset: utf-8\n"
+
+#: .\main\models.py:9
+msgid "link do ksiazki"
+msgstr "odnośnik do książki"
+
+#: .\main\models.py:10
+msgid "e-mail address"
+msgstr "adres e-mail"
+
+#: .\main\models.py:11
+msgid "creation date"
+msgstr "data utworzenia"
 
 #: .\templates\index.html.py:10
 msgid "Hell World"
