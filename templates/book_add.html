@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block HEAD %}
+	{{ block.super }}
+{% endblock HEAD %}
+
+{% block BODY %}
+	
+	<h2>{% trans 'Book' %}</h2>
+	
+	{% if form.is_valid %}
+		
+		<p>{% trans 'Order has been saved' %}</p>
+		
+	{% else %}
+		
+		<div id="bookadd">
+			<form method="POST" action=".">
+				{{ form.as_p }}
+				<input type="submit" value="{% trans 'Send order' %}" /> 
+			</form>
+		</div>
+		
+	{% endif %}
+	
+{% endblock BODY %}

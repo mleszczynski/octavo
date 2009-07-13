@@ -25,7 +25,7 @@ class Book(models.Model):
     )
     
     name = models.CharField(max_length=128, verbose_name=_('name'))
-    link = models.URLField(verbose_name=_('link to book'))
+    link = models.URLField(verbose_name=_('link to book'), help_text=_('must be from manning.com'))
     status = models.PositiveSmallIntegerField(verbose_name=_('status'), choices=BOOK_STATUSES, default=1, help_text=_('book status'))
     creation_date = models.DateTimeField(verbose_name=_('creation date'), auto_now_add=True)
     

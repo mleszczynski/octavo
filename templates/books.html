@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block HEAD %}
+	{{ block.super }}
+{% endblock HEAD %}
+
+{% block BODY %}
+	
+	<h2>{% trans 'Book' %}</h2>
+	
+	{% for book in books %}
+		
+		<p>
+			<a href="/octavo/book/{{ book.id }}/">
+				{{ book }}
+			</a>
+		</p>
+		
+	{% endfor %}
+	
+{% endblock BODY %}
+

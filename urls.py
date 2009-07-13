@@ -1,30 +1,19 @@
 # -*- coding: utf-8 -*-
-
 from django.conf.urls.defaults import *
 from django.conf import settings
 
 from octavo import admin
-
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
 
 handler500 = 'octavo.main.views.handler500'
 handler404 = 'octavo.main.views.handler404'
 
 
 urlpatterns = patterns('octavo.main.views',
-    # Example:
-    # (r'^octavo/', include('octavo.foo.urls')),
-
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
-    # to INSTALLED_APPS to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
     (r'^octavo/admin/(.*)', admin.site.root),
     (r'^octavo/$', 'index'),
-    (r'^octavo/book/add/$', 'add_book'),
+    (r'^octavo/books/$', 'books'),
+    (r'^octavo/book/(?P<book_id>\d+)/$', 'book'), 
+    (r'^octavo/book/add/$', 'book_add'),   
 )
 
 urlpatterns += patterns('django.views.static',

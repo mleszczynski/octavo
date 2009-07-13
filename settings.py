@@ -82,6 +82,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
+    'registration',
     'octavo.main',
 )
 
@@ -108,3 +109,5 @@ LOGIN_REDIRECT_URL = ROOT_URL
 LOGIN_URL = ROOT_URL + 'login/'
 
 SITE_TITLE = 'octavo'
+
+ACCOUNT_ACTIVATION_DAYS = 5

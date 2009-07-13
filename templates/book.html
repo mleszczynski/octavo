@@ -9,19 +9,17 @@
 	
 	<h2>{% trans 'Book' %}</h2>
 	
-	{% if form.is_valid %}
-		
-		<p>{% trans 'Order has been saved' %}</p>
-		
-	{% else %}
-		
-		<div id="bookadd">
-			<form method="POST" action=".">
-				{{ form.as_p }}
-				<input type="submit" value="{% trans 'Send order' %}" /> 
-			</form>
-		</div>
-		
-	{% endif %}
+	<div class="book">
+		<h4>{{ book.name }}</h4> 
+		link:
+		<br />
+		<a href="{{ book.link }}">{{ book.link }}</a>
+		<br />
+		data:
+		<br />
+		{{ book.creation_date|date:"Y m" }}
+	</div>
 	
 {% endblock BODY %}
+
+

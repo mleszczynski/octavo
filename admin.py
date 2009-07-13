@@ -6,4 +6,4 @@ from octavo.main import models as octavo_models
 from octavo.main import forms as octavo_forms
 
 
-site.register(octavo_models.Book)
+site.register(octavo_models.Book, octavo_forms.BookAdmin)
